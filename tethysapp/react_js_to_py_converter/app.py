@@ -1,4 +1,5 @@
 from tethys_sdk.components import ReactPyBase
+from .utils import do_py_to_js_conversion, copy_to_clipboard
 
 
 class App(ReactPyBase):
@@ -75,8 +76,8 @@ def home(lib):
                             width="100px"
                         )("""
                             This is the the library accessor that should be used for
-                            the package you got this example from. For example, type "bs"
-                            if you're pasting in React Bootstrap code.
+                            the ReactJS package you got this code from. For example, 
+                            type "bs" if you're pasting in React Bootstrap code.
                         """),
                     ),
                     lib.bs.Button(on_click=lambda e: set_reactpy_code(do_py_to_js_conversion(reactjs_code, accessor)))("Convert"),
