@@ -14,3 +14,5 @@ requirements:
 
   pip:
     - reactpy-django
+    - black
+    - pyperclip
